@@ -1,0 +1,90 @@
+@use '../scss/base';
+
+.walletContainer {
+  display: flex;
+  flex-direction: column;
+  gap: base.$spacing-sm;
+}
+
+.walletConnected {
+  display: flex;
+  align-items: center;
+}
+
+.actionConnected {
+  border-radius: 0 base.$radius-lg base.$radius-lg 0;
+  background: base.$gradient-wallet;
+}
+
+.connectedDropdown {
+  border-radius: base.$radius-lg 0 0 base.$radius-lg;
+  padding: 6px 12px;
+}
+
+.action {
+  background: base.$bg-connect;
+}
+
+.actionConnect {
+  background: base.$gradient-text-connect;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  @supports not (background-clip: text) {
+    color: #97FCA6;
+  }
+}
+
+.errorMessage {
+  display: flex;
+  align-items: center;
+  gap: base.$spacing-sm;
+
+  background: rgba(base.$accent-red, 0.1);
+  border: 1px solid base.$accent-red;
+  border-radius: base.$radius-md;
+  padding: base.$spacing-sm base.$spacing-md;
+  font-size: base.$font-sm;
+  color: base.$accent-red;
+  animation: slideDown 0.3s ease;
+
+  svg {
+    flex-shrink: 0;
+    color: base.$accent-red;
+  }
+
+  span {
+    flex: 1;
+  }
+}
+
+.closeError {
+  background: none;
+  border: none;
+  color: base.$accent-red;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,51 @@
+@use '../scss/base';
+
+.priceDisplay {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: base.$spacing-lg;
+  background: base.$bg-primary;
+}
+
+.priceSection {
+  display: flex;
+  align-items: center;
+  gap: base.$spacing-md;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  color: base.$text-primary;
+  line-height: base.$line-height-tight;
+}
+
+.integer {
+  font-size: base.$font-xxxl;
+  letter-spacing: base.$letter-spacing-tight;
+}
+
+.decimal {
+  font-size: base.$font-xxxl;
+  color: base.$text-secondary;
+  letter-spacing: base.$letter-spacing-tight;
+}
+
+.change {
+  font-size: 40px;
+
+  &.positive {
+    color: base.$accent-green;
+  }
+
+  &.negative {
+    color: base.$accent-red;
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: base.$spacing-sm;
+}

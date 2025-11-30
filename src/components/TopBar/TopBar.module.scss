@@ -1,0 +1,10 @@
+@use '../scss/base';
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: base.$spacing-md base.$spacing-lg;
+  background: base.$bg-primary;
+  gap: base.$spacing-md;
+}

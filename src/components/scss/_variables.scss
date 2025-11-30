@@ -1,0 +1,171 @@
+// ============================================
+// COLORS
+// ============================================
+
+// Backgrounds
+$bg-primary: #1a1a1a;
+$bg-secondary: #242424;
+$bg-elevated: #2d2d2d;
+$bg-card: #1f1f1f;
+
+// Text colors
+$text-primary: #ffffff;
+$text-secondary: #a0a0a0;
+$text-tertiary: #6b6b6b;
+$text-muted: #4a4a4a;
+
+// Accent colors
+$accent-green: #4ade80;
+$accent-green-dark: #22c55e;
+$accent-red: #ef4444;
+$accent-red-dark: #dc2626;
+$accent-yellow: #facc15;
+$accent-yellow-bright: #fbbf24;
+$accent-gold: #ECBD75;
+
+// Chart specific
+$chart-line: #fbbf24;
+$chart-grid: #2a2a2a;
+$chart-label-bg: #4ade80;
+$chart-label-text: #000000;
+
+// Border colors
+$border-primary: #333333;
+$border-secondary: #2a2a2a;
+$border-active: #4ade80;
+
+$font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display',
+'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+
+// Font sizes
+$font-xxs: 10px;
+$font-xs: 11px;
+$font-sm: 12px;
+$font-md: 14px;
+$font-lg: 16px;
+$font-xl: 20px;
+$font-xxl: 28px;
+$font-xxxl: 48px;
+
+// Font weights
+$font-light: 300;
+$font-regular: 400;
+$font-medium: 500;
+$font-semibold: 600;
+$font-bold: 700;
+
+// Line heights
+$line-height-tight: 1.2;
+$line-height-normal: 1.5;
+$line-height-relaxed: 1.75;
+
+// Letter spacing
+$letter-spacing-tight: -0.02em;
+$letter-spacing-normal: 0;
+$letter-spacing-wide: 0.02em;
+
+// ============================================
+// SPACING
+// ============================================
+
+$spacing-xxs: 2px;
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 12px;
+$spacing-lg: 16px;
+$spacing-xl: 20px;
+$spacing-xxl: 24px;
+$spacing-xxxl: 32px;
+
+// ============================================
+// BORDER RADIUS
+// ============================================
+
+$radius-xs: 4px;
+$radius-sm: 6px;
+$radius-md: 8px;
+$radius-lg: 12px;
+$radius-xl: 16px;
+$radius-xxl: 20px;
+$radius-full: 9999px;
+
+// ============================================
+// SHADOWS
+// ============================================
+
+$shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+$shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
+$shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.6);
+
+// ============================================
+// TRANSITIONS
+// ============================================
+
+$transition-fast: 0.15s ease;
+$transition-base: 0.2s ease;
+$transition-slow: 0.3s ease;
+
+// ============================================
+// Z-INDEX
+// ============================================
+
+$z-base: 1;
+$z-dropdown: 100;
+$z-sticky: 200;
+$z-fixed: 300;
+$z-modal-backdrop: 400;
+$z-modal: 500;
+$z-popover: 600;
+$z-tooltip: 700;
+
+// ============================================
+// BREAKPOINTS
+// ============================================
+
+$breakpoint-mobile: 375px;
+$breakpoint-mobile-lg: 425px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+$breakpoint-desktop-lg: 1440px;
+
+// ============================================
+// DIMENSIONS
+// ============================================
+
+// Heights
+$header-height: 56px;
+$bottom-nav-height: 64px;
+$button-height-sm: 36px;
+$button-height-md: 44px;
+$button-height-lg: 52px;
+
+// Widths
+$container-max-width: 1200px;
+$sidebar-width: 280px;
+
+// ============================================
+// SPECIFIC COMPONENT VALUES
+// ============================================
+
+// Chart
+$chart-height: 320px;
+$chart-padding: $spacing-md;
+
+// Buttons
+$button-padding-x: $spacing-lg;
+$button-padding-y: $spacing-md;
+
+// Cards
+$card-padding: $spacing-lg;
+
+// ============================================
+// GRADIENTS
+// ============================================
+
+$gradient-green: linear-gradient(135deg, $accent-green 0%, $accent-green-dark 100%);
+$gradient-red: linear-gradient(135deg, $accent-red 0%, $accent-red-dark 100%);
+$gradient-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+$gradient-text-connect: linear-gradient(90deg, #97FCA6 0%, #F6C90F 100%);
+$gradient-wallet: linear-gradient(135deg, #C3F563 0%, #F6C90F 100%);
+$bg-connect: #3d4a35;

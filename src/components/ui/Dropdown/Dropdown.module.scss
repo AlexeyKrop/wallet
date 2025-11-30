@@ -1,0 +1,136 @@
+@use '../../scss/base';
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  gap: base.$spacing-sm;
+
+  background: base.$bg-elevated;
+  border-radius: base.$radius-md;
+  padding: base.$spacing-sm base.$spacing-md;
+  cursor: pointer;
+  transition: all base.$transition-base;
+  white-space: nowrap;
+  user-select: none;
+
+}
+
+.disabled {
+  .trigger {
+    opacity: 0.5;
+    cursor: not-allowed;
+
+    &:hover {
+      background: base.$bg-elevated;
+    }
+
+  }
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  line-height: 1em;
+}
+
+.label {
+  font-size: base.$font-md;
+  font-weight: base.$font-semibold;
+  color: base.$text-primary;
+  font-family: base.$font-family;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.secondaryLabel {
+  font-size: base.$font-sm;
+  color: base.$text-secondary;
+}
+
+.arrow {
+  flex-shrink: 0;
+  color: base.$text-secondary;
+  transition: transform base.$transition-base;
+}
+
+.arrowOpen {
+  transform: rotate(180deg);
+}
+
+.menu {
+  position: absolute;
+  top: calc(100% + #{base.$spacing-xs});
+  left: 0;
+  right: 0;
+
+  background: base.$bg-elevated;
+  border: 1px solid base.$border-primary;
+  border-radius: base.$radius-md;
+  padding: base.$spacing-xs;
+  box-shadow: base.$shadow-lg;
+  z-index: base.$z-dropdown;
+
+  max-height: 300px;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: base.$bg-secondary;
+    border-radius: base.$radius-sm;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: base.$radius-sm;
+  }
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: base.$spacing-sm;
+
+  padding: base.$spacing-sm base.$spacing-md;
+  border-radius: base.$radius-sm;
+  font-size: inherit;
+  font-weight: inherit;
+  color: base.$text-primary;
+  cursor: pointer;
+  transition: all base.$transition-fast;
+
+  &:hover:not(.optionDisabled) {
+    background: base.$bg-secondary;
+  }
+}
+
+.selected {
+  background: rgba(base.$accent-green, 0.1);
+  color: base.$accent-green;
+
+  &:hover {
+    background: rgba(base.$accent-green, 0.15);
+  }
+}
+
+.optionDisabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.optionIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  line-height: 1em;
+}

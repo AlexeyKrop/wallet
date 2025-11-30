@@ -1,0 +1,27 @@
+@use '../scss/base';
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: base.$spacing-md base.$spacing-lg;
+  background: base.$bg-primary;
+  border-bottom: 1px solid base.$border-primary;
+  min-height: base.$header-height;
+}
+
+.menuButton {
+  display: flex;
+  align-items: center;
+  gap: base.$spacing-xs;
+}
+
+.title {
+  font-size: base.$font-lg;
+  font-weight: base.$font-semibold;
+  color: base.$text-primary;
+  margin: 0;
+  flex: 1;
+  text-align: center;
+  letter-spacing: base.$letter-spacing-tight;
+}

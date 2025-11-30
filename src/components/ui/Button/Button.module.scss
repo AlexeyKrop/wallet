@@ -1,0 +1,145 @@
+@use '../../scss/base';
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: base.$spacing-sm;
+
+  border: none;
+  border-radius: base.$radius-md;
+  font-family: base.$font-family;
+  font-weight: base.$font-semibold;
+  cursor: pointer;
+  transition: all base.$transition-base;
+  white-space: nowrap;
+
+  &:hover:not(:disabled) {
+    opacity: 0.9;
+  }
+
+  &:active:not(:disabled) {
+    opacity: 1;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &:focus-visible {
+    outline: 2px solid base.$accent-green;
+    outline-offset: 2px;
+  }
+}
+
+.sm {
+  padding: base.$spacing-xs base.$spacing-md;
+  font-size: base.$font-sm;
+  height: base.$button-height-sm;
+}
+
+.md {
+  padding: base.$spacing-sm base.$spacing-lg;
+  font-size: base.$font-md;
+  height: base.$button-height-md;
+}
+
+.lg {
+  padding: base.$spacing-md base.$spacing-xl;
+  font-size: base.$font-lg;
+  height: base.$button-height-lg;
+}
+
+.iconOnly {
+  gap: 0;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.primary {
+  background: base.$bg-elevated;
+  color: base.$text-primary;
+}
+
+.success {
+  background: rgba(base.$accent-green, 0.15);
+  color: base.$accent-green;
+
+  &:hover:not(:disabled) {
+    background: rgba(base.$accent-green, 0.25);
+  }
+}
+
+.danger {
+  background: rgba(base.$accent-red, 0.15);
+  color: base.$accent-red;
+
+  &:hover:not(:disabled) {
+    background: rgba(base.$accent-red, 0.25);
+  }
+}
+
+.warning {
+  background: base.$accent-yellow;
+  color: base.$bg-primary;
+}
+
+.ghost {
+  background: transparent;
+  color: base.$text-secondary;
+
+  &:hover:not(:disabled) {
+    background: base.$bg-elevated;
+    color: base.$text-primary;
+  }
+}
+
+.outline {
+  background: transparent;
+  color: base.$text-primary;
+  border: 1px solid base.$border-primary;
+
+  &:hover:not(:disabled) {
+    border-color: base.$accent-green;
+    background: rgba(base.$accent-green, 0.1);
+  }
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.loading {
+  position: relative;
+  pointer-events: none;
+
+  .content {
+    opacity: 0.7;
+  }
+}
+
+.spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: currentColor;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: inherit;
+}

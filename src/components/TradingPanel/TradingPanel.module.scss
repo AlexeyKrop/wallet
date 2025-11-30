@@ -1,0 +1,96 @@
+@use '../scss/base';
+
+.tradingPanel {
+  padding: base.$spacing-lg;
+  background: base.$bg-primary;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: base.$spacing-lg;
+}
+
+.positionDetails {
+  font-size: base.$font-md;
+  color: base.$text-secondary;
+}
+
+.dropdowns {
+  display: flex;
+  gap: base.$spacing-sm;
+}
+
+.dropdown {
+  min-width: 120px;
+}
+
+.positionButtons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: base.$spacing-md;
+  margin-bottom: base.$spacing-xl;
+}
+
+.longButton,
+.shortButton {
+  padding: base.$spacing-lg;
+  font-size: base.$font-lg;
+  max-width: 200px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  gap: base.$spacing-sm;
+}
+
+.tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: base.$spacing-xs;
+  padding: base.$spacing-md base.$spacing-xs;
+  background: transparent;
+  border: none;
+  color: base.$text-tertiary;
+  cursor: pointer;
+  transition: color base.$transition-base;
+  position: relative;
+  border-radius: base.$radius-sm;
+  min-height: 64px;
+  max-width: 64px;
+  width: 100%;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  span {
+    font-size: base.$font-xs;
+  }
+
+  &.activeTab {
+    color: base.$text-primary;
+    background: base.$bg-connect;
+    border-radius: base.$radius-lg;
+  }
+}
+
+.badge {
+  position: absolute;
+  top: -6px;
+  left: 90%;
+  transform: translateX(-50%);
+  background: base.$accent-gold;
+  color: #000000;
+  font-size: base.$font-xxs;
+  padding: 2px 6px;
+  border-radius: base.$radius-full;
+  font-weight: base.$font-semibold;
+  line-height: 1;
+  white-space: nowrap;
+}
