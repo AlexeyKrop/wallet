@@ -5,11 +5,9 @@ import styles from './Header.module.scss';
 
 export const Header = () => {
     const handleMenuClick = () => {
-        console.log('Menu clicked');
     };
 
     const handleCloseClick = () => {
-        console.log('Close clicked');
     };
 
     return (

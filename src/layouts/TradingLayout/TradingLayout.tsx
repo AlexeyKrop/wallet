@@ -1,10 +1,13 @@
 import {Chart, Header, PriceDisplay, TopBar, TradingPanel} from "../../components";
 import {usePriceData} from "../../hooks";
 
+import styles from './TradingLayout.module.scss';
+
+
 export const TradingLayout = () => {
     const priceData = usePriceData();
     return (
-        <div>
+        <div className={styles.layout}>
             <Header/>
             <TopBar/>
             <PriceDisplay

@@ -1,0 +1,9 @@
+@use '../../components/scss/base';
+
+.layout {
+  background: base.$bg-primary;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
